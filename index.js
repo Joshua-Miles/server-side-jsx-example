@@ -13,7 +13,8 @@ app.get('/', async (req, res) => {
             <h1 className="header">
                 {user.name}
             </h1>
-            <h2>Cool!</h2>
+            <a href={`http://www.google.com/?q=${user.name}`}>{user.name}</a>
+            <p>Cool!</p>
         </div>
     )
 
