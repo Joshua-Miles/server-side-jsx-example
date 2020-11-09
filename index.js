@@ -3,9 +3,11 @@ const app = express()
 const renderJSX = require('server-side-jsx')
 
 app.get('/', async (req, res) => {
+    
     let user = {
         name: 'Joel'
     }
+
     let page = await renderJSX(
         <div>
             <h1 className="header">
@@ -14,6 +16,7 @@ app.get('/', async (req, res) => {
             <h2>Cool!</h2>
         </div>
     )
+
     res.send(page)
 })
 
